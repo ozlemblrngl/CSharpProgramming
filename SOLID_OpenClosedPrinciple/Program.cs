@@ -2,7 +2,9 @@
 {
     private static void Main(string[] args)
     {
-        
+        // aşağıdaki kodlama da tercih edilir doğru kodlama değil çünkü new kullanıyoruz. new kullanmadan yapmak lazım hoca yazılım geliştirme tekniklerinde doğrusunu gösterdi.
+        //IoC Container kullanmamızı öneriyor.// IoC ye örnek: Ninject, AutoFac, Structure Map, Castle Windsor,
+
         CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
         customerManager.Add();
     }
