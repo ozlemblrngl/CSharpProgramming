@@ -25,7 +25,7 @@
        İki şey sırf birbirine benziyor diye birbirinin yerine kullanılmamalı.
 
        4- Interface Segregation
-
+       Her şeyi yani operasyonu interface içine koymamalıyız, nerede nasıl kullanılacaklarını öngörerek ayrı interfaceler oluşturmalı.
 
        5- Dependency Inversion
 
