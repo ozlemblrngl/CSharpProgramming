@@ -25,11 +25,6 @@
        4- Interface Segregation
        5- Dependency Inversion
 
-
-       
-
-
-
         */
     }
 }

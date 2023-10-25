@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace CSharpProgramming_SOLID_YazilimGelistirmePrensipleri
 {
+    private static void Main(string[] args)
+    {
+       
+    }
 
-    // ********************************* AŞAĞIDA SINGLE RESPONSIBILITY İLKESİNE AYKIRILIK GÖSTERİLMİŞTİR ******************************
+// ********************************* AŞAĞIDA SINGLE RESPONSIBILITY İLKESİNE AYKIRILIK GÖSTERİLMİŞTİR ******************************
 
-    class CustomerManager
+class CustomerManager
     {
 
         // Aspect Orieented Programming burada devreye giriyor.
