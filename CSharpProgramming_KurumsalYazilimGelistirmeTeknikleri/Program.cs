@@ -53,15 +53,127 @@
         Pekş bu ne anlama gelmektedir?
         Gelişim odaklı yazılım, değişen koşulara adapte edilebilir kod yazmaktır. çalışıyorsa dokunma mantığı hatalıdır.
         Plug and play(Pnp) Solid yazılım prensiplerinin doğru şekilde uygulanması anlamına gelir. Solidi ezberlememek onun yerine plug and play yani soyutlama tekniklerimi öğrenmek gerekiir.
-         
+        
+        *******************************************
+        
+        Cross-Cutting
 
-
-
-
-
-
-
+        "Cross-cutting concern" (veya "cross-cutting aspect"), yazılım geliştirme sürecinde birden fazla bileşeni veya modülü etkileyen, 
+        tüm sistemi yatay bir şekilde geçen endişeleri ifade eder. Yani, bir yazılım sistemi içinde birden fazla modül veya bileşen tarafından paylaşılan, 
+        genel sistem davranışını etkileyen ve işlevsellikle doğrudan ilgili olmayan özelliklerdir.
+        Cross-cutting concerns, yazılımın farklı parçalarında yaygın olarak tekrarlanabilir ve farklı modüller arasında etkileşimde bulunabilir. 
 
         */
+
+        //IoC Container, Ninject, AutoFac. Bunlar kullanılmalıdır doğru kod için keza aşağıdaki kod yazımı tekniği olarak doğru değildir. 
+
+        CustomerManager customerManager = 
+            new CustomerManager(new CustomerDal(), new MainLoggerAdopter());
+        //new DatabaseLogger() alternatifi, new EmailLogger() alteratifi, new FakeLogger() alternatifi yerine new MainLoggerAdapter alternatifi eklenebilir.
+        customerManager.Save(new Customer());
+
+
+
+    }
+}
+
+class CustomerDal : ICustomerDal // veri eirişim katmanıdır
+{
+    public void Save()
+    {
+        Console.WriteLine("Customer Added");
+    }
+}
+
+interface ICustomerDal
+{
+    void Save();
+}
+
+// hiçbir zaman çıplak bir class kalmamalıdır yani sadece tek başına class olmamalıdır bir interface i, inheritance i olmalıdır.
+// Eğer yalın yani çıplak kalıyorsa orada bir hata var demektir.
+
+class CustomerManager : ICustomerService // iş katmanıdır.
+{
+    private ICustomerDal _customerDal; //construction
+    private ILogger _logger;
+
+    public CustomerManager(ICustomerDal customerDal, ILogger logger) //construction
+    {
+        _customerDal = customerDal;
+        _logger = logger;
+    }
+    public void Save(Customer customer)
+    {
+        // kurallar yazılacak
+        // DİKKAT BİR SINIF BAĞIMLI OLDUĞU BAŞKA BİR SINIFI NEW LEYEMEZ. O NEDENLE AŞAĞIDAKİ YILDIZLI KOD HATALIDIR.
+
+        //****CustomerDal customerDal = new CustomerDal();
+       //***alternatif doğru kullanım customerDal.Save();
+        _customerDal.Save();
+        _logger.Log();
+        
+    }
+}
+
+
+internal interface ICustomerService // default değer internal'dır. başına yazmazsak da sıkıntı olmaz. // iş katmanıdır.
+{
+    // buraya operationlar yazılır.
+
+    void Save(Customer customer);
+
+}
+
+class Customer // iş katmanıdır.
+{
+    public int Id { get; set; }
+    public string FirstName { get; set; }
+}
+
+interface ILogger
+{
+    void Log();
+}
+
+class DatabaseLogger : ILogger
+{
+    public void Log()
+    {
+        Console.WriteLine("Logged to db");
+    }
+}
+
+class EmailLogger : ILogger
+{
+    public void Log()
+    {
+        Console.WriteLine("Email to db");
+    }
+}
+
+class FakeLogger : ILogger
+{
+    public void Log()
+    {
+        
+    }
+}
+class MainLoggerAdopter : ILogger // burası ile mikroservisi kendi projemize dahil ediyoruz.
+{
+    public void Log()
+    {
+        MainLogger mainlogger = new MainLogger();
+        mainlogger.LogToMain();
+    }
+}
+
+//Microservis
+// bir mikroservisi projemize nasıl dahil ederiz?
+class MainLogger
+{
+    public void LogToMain()
+    {
+        Console.WriteLine("logged to main");
     }
 }
