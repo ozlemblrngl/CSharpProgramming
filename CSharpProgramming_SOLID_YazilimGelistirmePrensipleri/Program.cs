@@ -25,6 +25,8 @@
        İki şey sırf birbirine benziyor diye birbirinin yerine kullanılmamalı.
 
        4- Interface Segregation
+
+
        5- Dependency Inversion
 
         */
