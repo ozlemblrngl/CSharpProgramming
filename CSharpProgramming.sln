@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgramming_ArananYazilimciOlmak", "CSharpProgramming\CSharpProgramming_ArananYazilimciOlmak.csproj", "{DBCBE5EA-002A-4A3D-B4D3-2D2A87922087}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgramming_KurumsalYazilimGelistirmeTeknikleri", "CSharpProgramming_KurumsalYazilimGelistirmeTeknikleri\CSharpProgramming_KurumsalYazilimGelistirmeTeknikleri.csproj", "{2E9F96FC-DDA5-4BA6-B449-E160BC300913}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DBCBE5EA-002A-4A3D-B4D3-2D2A87922087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBCBE5EA-002A-4A3D-B4D3-2D2A87922087}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBCBE5EA-002A-4A3D-B4D3-2D2A87922087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9F96FC-DDA5-4BA6-B449-E160BC300913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9F96FC-DDA5-4BA6-B449-E160BC300913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9F96FC-DDA5-4BA6-B449-E160BC300913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9F96FC-DDA5-4BA6-B449-E160BC300913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
