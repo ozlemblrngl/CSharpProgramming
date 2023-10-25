@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID_LiskovsSubstitutionPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID_InterfaceSegregationPrinciple", "SOLID_InterfaceSegregationPrinciple\SOLID_InterfaceSegregationPrinciple.csproj", "{DE26FA77-C77E-46A3-9D09-BBB6436B4738}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanCode", "CleanCode", "{BD017CF7-B0BC-408C-8A11-63D231C763CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLID", "SOLID", "{974F649A-6E73-44AF-AA3A-9F4FAE212BB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +64,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32307229-75D9-4C7F-854A-22D47E098173} = {974F649A-6E73-44AF-AA3A-9F4FAE212BB1}
+		{3B685ED3-BC87-4065-B09A-0BF84A84E879} = {974F649A-6E73-44AF-AA3A-9F4FAE212BB1}
+		{6FFD4189-8415-4569-BC66-308FA7B06706} = {974F649A-6E73-44AF-AA3A-9F4FAE212BB1}
+		{DE26FA77-C77E-46A3-9D09-BBB6436B4738} = {974F649A-6E73-44AF-AA3A-9F4FAE212BB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F95AC00-D303-4D17-AA52-5148BEB0F721}
