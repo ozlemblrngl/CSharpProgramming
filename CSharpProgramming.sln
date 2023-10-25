@@ -5,7 +5,11 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgramming_ArananYazilimciOlmak", "CSharpProgramming\CSharpProgramming_ArananYazilimciOlmak.csproj", "{DBCBE5EA-002A-4A3D-B4D3-2D2A87922087}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgramming_KurumsalYazilimGelistirmeTeknikleri", "CSharpProgramming_KurumsalYazilimGelistirmeTeknikleri\CSharpProgramming_KurumsalYazilimGelistirmeTeknikleri.csproj", "{2E9F96FC-DDA5-4BA6-B449-E160BC300913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpProgramming_KurumsalYazilimGelistirmeTeknikleri", "CSharpProgramming_KurumsalYazilimGelistirmeTeknikleri\CSharpProgramming_KurumsalYazilimGelistirmeTeknikleri.csproj", "{2E9F96FC-DDA5-4BA6-B449-E160BC300913}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpProgramming_SOLID_YazilimGelistirmePrensipleri", "CSharpProgramming_SOLID_YazilimGelistirmePrensipleri\CSharpProgramming_SOLID_YazilimGelistirmePrensipleri.csproj", "{30984093-E314-43D1-A68E-3BF8556C0836}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpProgramming_ArananYazilimciOlmakk", "CSharpProgramming_ArananYazilimciOlmakk\CSharpProgramming_ArananYazilimciOlmakk.csproj", "{60217114-B45B-4762-9C29-F411A0191784}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{2E9F96FC-DDA5-4BA6-B449-E160BC300913}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E9F96FC-DDA5-4BA6-B449-E160BC300913}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E9F96FC-DDA5-4BA6-B449-E160BC300913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30984093-E314-43D1-A68E-3BF8556C0836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30984093-E314-43D1-A68E-3BF8556C0836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30984093-E314-43D1-A68E-3BF8556C0836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30984093-E314-43D1-A68E-3BF8556C0836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60217114-B45B-4762-9C29-F411A0191784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60217114-B45B-4762-9C29-F411A0191784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60217114-B45B-4762-9C29-F411A0191784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60217114-B45B-4762-9C29-F411A0191784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
